@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .box {
+            background-size: cover;
+        }
+
+        .box1 {
+            background: linear-gradient(to top left, rgb(255, 231, 250), rgb(151, 110, 167));
+        }
+
+        .box2 {
+            background: linear-gradient(to top right, rgb(255, 231, 250), rgb(151, 110, 167));
+        }
+
+        .box3 {
+            background: linear-gradient(to bottom left, rgb(255, 231, 250), rgb(151, 110, 167));
+        }
+
+        .box4 {
+            background: linear-gradient(to bottom right, rgb(255, 231, 250), rgb(151, 110, 167));
+        }
+
+        .wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 350px;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.13);
+            box-shadow: 0 0 40px rgb(160, 125, 155);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .img-area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        .img-area .inner-area {
+            height: calc(100% - 25px);
+            width: calc(100% - 25px);
+            border-radius: 50%;
+        }
+
+        .inner-area img {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .name {
+            color: rgb(73, 60, 75);
+            margin: 10px 0 5px 0;
+            font-size: 23px;
+            font-weight: 500;
+        }
+
+        .about {
+            color: #8c7692;
+            font-weight: 400;
+            font-size: 16px;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0;
+            gap: 15px;
+        }
+        .social-icons a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .social-icons a img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .social-icons a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .buton-classı {
+            display: flex; 
+            width: 100%;
+        }
+
+        .buton-classı button {
+            outline: none;
+            padding: 12px 0;
+            color: #87888d; 
+            font-size: 17px;
+            position: relative;
+            width: 48%; 
+            border: none;
+            font-weight: 400;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 4;
+            transition: color 0.3s ease; 
+        }
+
+        .buton-classı button:first-child {
+            margin-right: 10px; 
+        }
+
+        .buton-classı button:last-child {
+            margin-left: 10px; 
+        }
+
+        .buton-classı button:hover {
+            color: rgb(0, 0, 0); 
+        }
+
+        .buton-classı button:hover:before {
+            z-index: -1;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+
+    <div class="wrapper">
+        <div class="img-area">
+            <div class="inner-area">
+                <img src="10.png" alt="Profile Image">
+            </div>
+        </div>
+
+        <div class="name">Lana Del Rey</div>
+        <div class="about">The Other Woman</div>
+
+        <div class="social-icons">
+            <a href="https://web.whatsapp.com" target="_blank"><img src="8.png" alt="WhatsApp"></a>
+            <a href="https://google.com" target="_blank"><img src="7.png" alt="Google"></a>
+            <a href="https://www.facebook.com" target="_blank"><img src="6.png" alt="Facebook"></a>
+            <a href="https://youtube.com" target="_blank"><img src="5.png" alt="YouTube"></a>
+        </div>
+
+        <div class="buton-classı">
+            <button>Mesaj</button>
+            <button>Abone Ol</button>
+        </div>
+    </div>
+</body>
+</html>
